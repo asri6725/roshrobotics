@@ -1,0 +1,18 @@
+.Container{
+    margin-top: 10px;
+}
+.ChairText{
+    margin-left: 10%;
+    width: 40%;
+    float: left;
+    margin-top: 5%;
+}
+.ImageContainer{
+    width: 40%;
+    float: right;
+    margin-right: 5%;
+} 
+
+.Content{
+    margin-top: 10%;
+}
