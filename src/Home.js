@@ -8,7 +8,7 @@ import Terabot from './slides/Terabot';
 import Chair from './slides/Chair';
 import Sprinkler from './slides/Sprinkler';
 
-import { TextField, Button} from '@material-ui/core';
+import { Typography, TextField, Button} from '@material-ui/core';
 
 SwiperCore.use([Navigation, Pagination, Controller, Thumbs]);
 
@@ -34,8 +34,13 @@ export default function Home(){
     
     return(
         <div>
-            <div className="parallax">
-                <p style={{'background-color':'rgba(255, 255, 255, 0.34)','width':'fit-content','margin-left':'25%'}}>Usable Robots in Military, Agriculture and Daily Work</p>
+            <div className="parallax" style={{'margin-top':'30px'}}>
+              <div className="myDiv" style={{'padding-top':'10%','width':'50%','height':'50%','margin-left':'25%'}}>
+               
+              <Typography style={{'background-color':"rgba(255,255,255,0.6)",'opacity':'1'}} variant="h5">Usable Robots in Military, Agriculture and Daily Work</Typography>
+      
+              </div>
+               
             </div>
 
             <Swiper

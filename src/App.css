@@ -11,6 +11,8 @@ a{
   position: fixed;
   top: 0;
   width: 100%;
+  opacity: 1;
+  z-index:99;
 }
 .buttons a {
   float: right;
