@@ -1,11 +1,16 @@
 import './App.css';
 import Home from './Home';
 import About from './About';
-import Terabot from './Terabot';
+import Contact from './Contact';
+import Terabot from './bots/Terabot';
+import ForkLift from './bots/ForkLift';
+import Chair from './bots/Chair';
+import Sprinkler from './bots/Sprinkler';
 
-import {Menu, MenuItem, Typography, Link} from '@material-ui/core';
+import {Menu, MenuItem, Typography, Link, Button} from '@material-ui/core';
 import React from 'react';
 
+import logo from './files/logo/logo_transparent.png';
 
 import {
   BrowserRouter as Router,
@@ -39,11 +44,11 @@ class App extends React.Component {
       <div>
       <div className="navbar">
       
-      <div style={{"width":"40%", "float":"left","margin-left":"5%","text-align":"left", "text-decoration": "none"}}>
+      <div style={{"width":"40%", "float":"left","margin-left":"5%","text-align":"left", "text-decoration": "none", 'margin-top':'5px'}}>
         <Link style={{ textDecoration: 'none' }} href="/"><Typography variant="h6" style={{'margin-top':'5px'}}>
             Roshans Robotics
-          </Typography>
-          </Link>
+  </Typography>
+          </ Link>
       </div>
       
         <div style={{"width":"50%", "float":"right"}} className="buttons">
@@ -87,6 +92,18 @@ class App extends React.Component {
           </Route>
           <Route path="/Terabot">
             <Terabot />
+          </Route>
+          <Route exact path="/ForkLift">
+            <ForkLift />
+          </Route>
+          <Route exact path="/Sprinkler">
+            <Sprinkler />
+          </Route>
+          <Route exact path="/Chair">
+            <Chair />
+          </Route>
+          <Route exact path="/Contact">
+            <Contact />
           </Route>
         </Switch>
       </div>

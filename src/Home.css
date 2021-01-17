@@ -11,6 +11,9 @@
   }
 
 .NewsLetter{
-  margin-top: 5%;
+  padding-top: 5%;
   padding-bottom: 10%;
+
+  background-color: #5481D1;
+  color: #ffffff;
 }

@@ -8,36 +8,51 @@ import Terabot from './slides/Terabot';
 import Chair from './slides/Chair';
 import Sprinkler from './slides/Sprinkler';
 
+import { makeStyles } from '@material-ui/core/styles';
 import { Typography, TextField, Button} from '@material-ui/core';
 
 SwiperCore.use([Navigation, Pagination, Controller, Thumbs]);
 
+const useStyles = makeStyles((theme) => ({
+  texfield: {
+    width: '30%',
+    borderColor: '#FFFFFFF'
+  },
+  input: {
+    color: 'white',
+    background: '#16384B',
+},
+cssLabel: {
+  color : 'white',
+},
+
+}));
 
 export default function Home(){
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const [controlledSwiper, setControlledSwiper] = useState(null);
     const slides = [];
     slides.push(
-    <SwiperSlide key={1} tag="li">
+    <SwiperSlide key={1} tag="p">
     <Terabot />
     </SwiperSlide>);
     slides.push(
-      <SwiperSlide key={3} tag="li">
+      <SwiperSlide key={3} tag="p">
       <Chair />
       </SwiperSlide>);
     slides.push(
-    <SwiperSlide key={2} tag="li">
+    <SwiperSlide key={2} tag="p">
     <Sprinkler />
     </SwiperSlide>);
     
-    
+    const classes = useStyles();
     
     return(
         <div>
             <div className="parallax" style={{'margin-top':'30px'}}>
               <div className="myDiv" style={{'padding-top':'10%','width':'50%','height':'50%','margin-left':'25%'}}>
                
-              <Typography style={{'background-color':"rgba(255,255,255,0.6)",'opacity':'1'}} variant="h5">Usable Robots in Military, Agriculture and Daily Work</Typography>
+              <Typography style={{'background-color':"rgba(255,255,255,0.6)",'opacity':'1', 'padding-top':'2%' , 'padding-bottom':'2%'}} variant="h5">Usable Robots in Military, Agriculture and Daily Work</Typography>
       
               </div>
                
@@ -67,9 +82,23 @@ export default function Home(){
       <div className="NewsLetter">
         <h4 style={{'margin-top':'2%'}}> Subscribe to the newsletter to recieve updates on the bots and on new research! </h4>
           <form style={{'margin-top':'5%'}}>
-          <TextField id="outlined-basic" label="Email" variant="outlined" />
-          <Button type="Submit" value="Send" color="Primary"> Send </Button>
+          <TextField id="standard-basic" 
+          label="Email" 
+          variant="outlined" 
+          className={classes.texfield}
+          InputProps={{
+            className: classes.input,
+        }}
+        InputLabelProps={{
+          classes: {
+            root: classes.cssLabel,
+          },
+        }}
+          />
+          <Button type="Submit" value="Send" color="secondary" variant="contained" style={{'height':'55px','width':'10%'}}> Send </Button>
+          
           </form>
+        
       </div>
         </div>
     );
