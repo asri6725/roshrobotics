@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.85b5909e.chunk.css",
+    "main.js": "/static/js/main.c70180c9.chunk.js",
+    "main.js.map": "/static/js/main.c70180c9.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.22142f44.js",
+    "runtime-main.js.map": "/static/js/runtime-main.22142f44.js.map",
+    "static/css/2.1d1f9f4f.chunk.css": "/static/css/2.1d1f9f4f.chunk.css",
+    "static/js/2.debcd9fa.chunk.js": "/static/js/2.debcd9fa.chunk.js",
+    "static/js/2.debcd9fa.chunk.js.map": "/static/js/2.debcd9fa.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.1d1f9f4f.chunk.css.map": "/static/css/2.1d1f9f4f.chunk.css.map",
+    "static/css/main.85b5909e.chunk.css.map": "/static/css/main.85b5909e.chunk.css.map",
+    "static/js/2.debcd9fa.chunk.js.LICENSE.txt": "/static/js/2.debcd9fa.chunk.js.LICENSE.txt",
+    "static/media/Chair2.fb73b909.png": "/static/media/Chair2.fb73b909.png",
+    "static/media/Home.css": "/static/media/Rosh.8303c09c.png",
+    "static/media/Sprinkler.8d616d93.png": "/static/media/Sprinkler.8d616d93.png",
+    "static/media/Terabot.0ec387e5.png": "/static/media/Terabot.0ec387e5.png",
+    "static/media/Terabot1.89bb8f3a.png": "/static/media/Terabot1.89bb8f3a.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.22142f44.js",
+    "static/css/2.1d1f9f4f.chunk.css",
+    "static/js/2.debcd9fa.chunk.js",
+    "static/css/main.85b5909e.chunk.css",
+    "static/js/main.c70180c9.chunk.js"
+  ]
+}
