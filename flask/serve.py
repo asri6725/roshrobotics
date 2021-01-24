@@ -8,7 +8,7 @@ def index():
     return app.send_static_file('index.html')
 
 @app.route('/<variable>')
-def index(variable):
+def someother(variable):
     return app.send_static_file('index.html')
 
 
