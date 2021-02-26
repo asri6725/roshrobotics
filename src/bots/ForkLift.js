@@ -1,8 +1,51 @@
-export default function ForkLift(){
+import {content} from '../_constants/content';
+import React from 'react';
+
+class Sprinkler extends React.Component{
+    
+    constructor(props){
+        super(props)
+        this.state = {
+            content : content.FORKLIFT
+        }
+    }
+    render(){
+        let paragraphs = []
+
+        for(var i=0; i<this.state.content.FIELD.PARAGRAPHS.length; i++){
+            paragraphs.push(<li key={i}> { this.state.content.FIELD.PARAGRAPHS[i] } </li>)
+        }
+       
     return(
         <div>
-            <p> This is the ForkLift page.</p>
-            <p> ForkLift Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ip</p>
+            <h1> {this.state.content.TITLE} </h1>
+
+            <h2>
+                {this.state.content.FIELD.TITLE}
+            </h2>
+
+            <p>
+                {this.state.content.FIELD.INTRO}
+            </p>
+
+            <p>
+                {paragraphs}
+            </p>
+
+            <p>
+                {this.state.content.FIELD.END}
+            </p>
+
+            <h2>
+                {this.state.content.OBJECT.TITLE}
+            </h2>
+
+            <p>
+                {this.state.content.OBJECT.CONTENT}
+            </p>
+             
         </div>
     );
+    }
 }
+export default Sprinkler;

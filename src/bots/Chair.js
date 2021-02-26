@@ -1,8 +1,55 @@
-export default function Terabot(){
+import {content} from '../_constants/content';
+import React from 'react';
+
+class Chair extends React.Component{
+    
+    constructor(props){
+        super(props)
+        this.state = {
+            content : content.CHAIR
+        }
+    }
+    render(){
+
+        const objective_paragraphs = []
+        
+        for (let i=0; i< this.state.content.OBJECTIVE.CONTENT.length; i++){
+            objective_paragraphs.push(<li key={i}> {this.state.content.OBJECTIVE.CONTENT[i]} </li>)
+        }
+        const applications_paragraphs = []
+        
+        for (let i=0; i< this.state.content.APPLICATIONS.length; i++){
+            applications_paragraphs.push(<li key={i}> {this.state.content.APPLICATIONS[i]} </li>)
+        }
     return(
         <div>
-            <p> This is the Terabot page.</p>
-            <p> Chair <br /> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ip</p>
+            <h1> {this.state.content.TITLE} </h1>
+
+            <p>
+                {this.state.content.INTRO}
+            </p>
+             
+             <h2>
+                 Applications
+             </h2>
+
+            <p>
+                {applications_paragraphs}
+            </p>
+
+            <p>
+                {this.state.content.PROBLEM_STATEMENT}
+            </p>
+
+            <h2>
+                {this.state.content.OBJECTIVE.TITLE}
+            </h2>
+            <p>
+                {objective_paragraphs}
+            </p>
+          
         </div>
     );
+    }
 }
+export default Chair;
