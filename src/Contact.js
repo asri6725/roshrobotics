@@ -1,7 +1,8 @@
 import React from 'react';
 import axios from 'axios';
+import './Contact.css';
 
-import { Button, TextField, CircularProgress, TextareaAutosize } from '@material-ui/core/';
+import { Button, TextField, CircularProgress, Grid } from '@material-ui/core/';
 
 class Contact extends React.Component{ 
     
@@ -61,15 +62,11 @@ class Contact extends React.Component{
       
       // Display form, if form is sent and is awaiting server response, display a loading animation.
       const form_display = this.state.isloading ? <div style={{'margin':'25%'}}><CircularProgress color="primary" /> </div>: (
-        <div>
-          <h3> Contact </h3>
+        <div className="Contact-Wrapper">
           {this.state.error}
         <form>
-        <TextField required  label="First Name" name = "firstname" value = {firstname} onChange={this.generalChangeHandler} /> <br />
-        <TextField required  label="Last Name"name = "lastname" value={lastname} onChange={this.generalChangeHandler} /> <br /><br />
-       <TextField required  label="Email Address" type="mail" name = "email" value = {email}  onChange={this.generalChangeHandler} /><br /><br />
-        <TextField   label="Phone Number" type="number" name = "phone" value={phone} onChange={this.generalChangeHandler}  /><br /> <br /><br />
-        
+        <TextField required  label="Name" name = "firstname" value = {firstname} onChange={this.generalChangeHandler} style={{width:"90%"}}/> <br /><br />
+        <TextField required  label="Email Address" type="mail" name = "email" value = {email}  onChange={this.generalChangeHandler} style={{width:"90%"}} /><br /><br /><br />
         <TextField
           id="outlined-textarea"
           label="Message"
@@ -80,6 +77,7 @@ class Contact extends React.Component{
           type="text" 
           name = "message" 
           rows={3} 
+          style={{width:"90%"}}
           value={message} 
           onChange={this.generalChangeHandler}
         />
@@ -105,8 +103,25 @@ class Contact extends React.Component{
         )
 
         return(
-          <div style={{'margin-top':'50px'}}>
-          {render_return}  
+          <div style={{'margin-top':'50px', "margin-left":"50px"}}>
+            <h3> Contact </h3>
+            <Grid container spacing="auto">
+              <Grid item style={{"width":"40%"}}>
+                <div>
+                  <p>Like to get in touch?</p>
+                  <p> Feel free to shoot me a message with the form or use the phone/email address provided.</p>
+                  
+                  <a href="tel:+61426161260">+6142 616 120</a> <br />
+                  <a href="mailto:roshan.chavan@gmail.com">roshan.chavan@gmail.com</a>
+              </div>
+              </Grid>
+
+              <Grid item style={{"width":"40%", "margin-left":"auto", "margin-right":"10%"}}>
+              <div>
+                {render_return}  
+              </div>
+              </Grid>
+            </Grid>
           </div>
         );
     }

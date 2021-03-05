@@ -7,9 +7,12 @@ import 'swiper/swiper-bundle.css';
 import Terabot from './slides/Terabot';
 import Chair from './slides/Chair';
 import Sprinkler from './slides/Sprinkler';
+import {placeholder} from './slides/placeholder.js';
 
 import { makeStyles } from '@material-ui/core/styles';
-import { Typography, TextField, Button} from '@material-ui/core';
+import { Typography,Menu, MenuItem, Link} from '@material-ui/core';
+
+import Contact from './Contact';
 
 SwiperCore.use([Navigation, Pagination, Controller, Thumbs]);
 
@@ -28,27 +31,70 @@ cssLabel: {
 
 }));
 
-export default function Home(){
-    const [thumbsSwiper, setThumbsSwiper] = useState(null);
-  const [controlledSwiper, setControlledSwiper] = useState(null);
+class Home extends React.Component {
+  constructor(props){
+    super(props)
+    this.state = {
+        anchorEl : false
+    }
+    this.handleClick = this.handleClick.bind(this);
+    this.handleClose = this.handleClose.bind(this);
+  }
+
+  //   const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  // const [controlledSwiper, setControlledSwiper] = useState(null);
+  //   const slides = [];
+  //   slides.push(
+  //   <SwiperSlide key={1} tag="p">
+  //   <placeholder />
+  //   </SwiperSlide>);
+    
+    handleClick = (event) => {
+      this.setState({anchorEl: event.currentTarget});
+    };
+  
+    handleClose = () => {
+      this.setState({anchorEl: null});
+    };
+    
+    
+    
+    //const classes = useStyles();
+    render(){
+    
     const slides = [];
     slides.push(
     <SwiperSlide key={1} tag="p">
-    <Terabot />
+    <placeholder />
     </SwiperSlide>);
-    slides.push(
-      <SwiperSlide key={3} tag="p">
-      <Chair />
-      </SwiperSlide>);
-    slides.push(
-    <SwiperSlide key={2} tag="p">
-    <Sprinkler />
-    </SwiperSlide>);
-    
-    const classes = useStyles();
     
     return(
         <div>
+          <div>
+          <div className="navbar">
+            <div style={{"width":"50%", "float":"right"}} className="buttons">
+              <a>Contact</a>
+              <a aria-controls="simple-menu" aria-haspopup="true" onClick={this.handleClick}>
+                Robots
+              </a>
+              <Menu
+                id="simple-menu"
+                anchorEl={this.state.anchorEl}
+                keepMounted
+                open={Boolean(this.state.anchorEl)}
+                onClose={this.handleClose}
+              
+              >
+                <Link style={{ textDecoration: 'none' }} href="/Terabot"><MenuItem onClick={this.handleClose}>Terabot</MenuItem></Link>
+                <Link style={{ textDecoration: 'none' }} href="/Chair"><MenuItem onClick={this.handleClose}>Chair</MenuItem></Link>
+                <Link style={{ textDecoration: 'none' }} href="/ForkLift"><MenuItem onClick={this.handleClose}>Forklift</MenuItem></Link>
+                <Link style={{ textDecoration: 'none' }} href="/Sprinkler"><MenuItem onClick={this.handleClose}>Sprinkler</MenuItem></Link>
+              </Menu>
+              <a href="/about">About</a>
+              <a href="/">Home</a>
+            </div>
+          </div>
+        
             <div className="parallax" style={{'margin-top':'30px'}}>
               <div className="myDiv" style={{'padding-top':'10%','width':'50%','height':'50%','margin-left':'25%'}}>
                
@@ -57,49 +103,30 @@ export default function Home(){
               </div>
                
             </div>
-
+          <div style={{"background-color":"#FFF3E0"}}>
             <Swiper
-        id="main"
-        thumbs={{ swiper: thumbsSwiper }}
-        controller={{ control: controlledSwiper }}
-        tag="section"
-        wrapperTag="ul"
-        navigation // check this
-        pagination //check this
-        spaceBetween={0}
-        slidesPerView={1}
-        loop={true} //Check this
-        autoplay={{delay:2, disableOnInteraction:true}} //check this
-        onInit={(swiper) => console.log('Swiper initialized!', swiper)}
-        onSlideChange={(swiper) => {
-          console.log('Slide index changed to: ', swiper.activeIndex);
-        }}
-        
-        
-      >
-        {slides}
-      </Swiper>
-      <div className="NewsLetter">
-        <h4 style={{'margin-top':'2%'}}> Subscribe to the newsletter to recieve updates on the bots and on new research! </h4>
-          <form style={{'margin-top':'5%'}}>
-          <TextField id="standard-basic" 
-          label="Email" 
-          variant="outlined" 
-          className={classes.texfield}
-          InputProps={{
-            className: classes.input,
-        }}
-        InputLabelProps={{
-          classes: {
-            root: classes.cssLabel,
-          },
-        }}
-          />
-          <Button type="Submit" value="Send" color="secondary" variant="contained" style={{'height':'55px','width':'10%'}}> Send </Button>
-          
-          </form>
-        
-      </div>
-        </div>
+              spaceBetween={50}
+              slidesPerView={1}
+              onSlideChange={() => console.log('slide change')}
+              onSwiper={(swiper) => console.log(swiper)}
+              navigation
+              pagination
+            >
+              <SwiperSlide> <div style={{"margin":"auto", "height":"300px", "background-color":"#FFF3E0"}}><p style={{"text-align":"center"}}> <p>This is some placeholder text. </p><p> Showcase your skills here </p> </p></div></SwiperSlide>
+              <SwiperSlide> <div style={{"margin":"auto", "height":"300px", "background-color":"#FFF3E0"}}><p style={{"text-align":"center"}}> <p> I work with react and angular </p></p></div></SwiperSlide>
+              <SwiperSlide> <div style={{"margin":"auto", "height":"300px", "background-color":"#FFF3E0"}}><p style={{"text-align":"center"}}> <p>I am great with AWS </p> </p></div></SwiperSlide>
+              </Swiper>
+              </div>
+              <div className="ProjectWrapper">
+                <Terabot />
+                <Chair />
+                <Sprinkler />
+              </div>
+              <Contact />
+            </div>
+          </div>
     );
+  }
 }
+
+export default Home;

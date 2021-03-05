@@ -1,6 +1,6 @@
 import {content} from './_constants/content';
 import React from 'react';
-
+import './About.css';
 class About extends React.Component{
     
     constructor(props){
