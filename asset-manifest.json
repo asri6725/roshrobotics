@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/roshrobotics/static/css/main.01151e14.chunk.css",
+    "main.js": "/roshrobotics/static/js/main.adb32cc3.chunk.js",
+    "main.js.map": "/roshrobotics/static/js/main.adb32cc3.chunk.js.map",
+    "runtime-main.js": "/roshrobotics/static/js/runtime-main.08f126c4.js",
+    "runtime-main.js.map": "/roshrobotics/static/js/runtime-main.08f126c4.js.map",
+    "static/css/2.1d1f9f4f.chunk.css": "/roshrobotics/static/css/2.1d1f9f4f.chunk.css",
+    "static/js/2.090524df.chunk.js": "/roshrobotics/static/js/2.090524df.chunk.js",
+    "static/js/2.090524df.chunk.js.map": "/roshrobotics/static/js/2.090524df.chunk.js.map",
+    "index.html": "/roshrobotics/index.html",
+    "static/css/2.1d1f9f4f.chunk.css.map": "/roshrobotics/static/css/2.1d1f9f4f.chunk.css.map",
+    "static/css/main.01151e14.chunk.css.map": "/roshrobotics/static/css/main.01151e14.chunk.css.map",
+    "static/js/2.090524df.chunk.js.LICENSE.txt": "/roshrobotics/static/js/2.090524df.chunk.js.LICENSE.txt",
+    "static/media/Chair.d8bcbe5c.png": "/roshrobotics/static/media/Chair.d8bcbe5c.png",
+    "static/media/Chair2.fb73b909.png": "/roshrobotics/static/media/Chair2.fb73b909.png",
+    "static/media/Home.css": "/roshrobotics/static/media/Rosh.8303c09c.png",
+    "static/media/Sprinkler.8d616d93.png": "/roshrobotics/static/media/Sprinkler.8d616d93.png",
+    "static/media/Terabot.67a124f8.png": "/roshrobotics/static/media/Terabot.67a124f8.png",
+    "static/media/email.85bec5ee.svg": "/roshrobotics/static/media/email.85bec5ee.svg",
+    "static/media/forklift.228f39e9.png": "/roshrobotics/static/media/forklift.228f39e9.png",
+    "static/media/keyboard_arrow_left-24px.842e761b.svg": "/roshrobotics/static/media/keyboard_arrow_left-24px.842e761b.svg",
+    "static/media/phone.b71af526.svg": "/roshrobotics/static/media/phone.b71af526.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.08f126c4.js",
+    "static/css/2.1d1f9f4f.chunk.css",
+    "static/js/2.090524df.chunk.js",
+    "static/css/main.01151e14.chunk.css",
+    "static/js/main.adb32cc3.chunk.js"
+  ]
+}
