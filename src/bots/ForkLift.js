@@ -2,8 +2,9 @@ import {content} from '../_constants/content';
 import React from 'react';
 import "./bots.css";
 import  back from '../files/keyboard_arrow_left-24px.svg';
-
+import ReactHtmlParser from 'html-react-parser'; 
 import { Button } from '@material-ui/core';
+import forklift from '../files/forklift.png';
 class Sprinkler extends React.Component{
     
     constructor(props){
@@ -38,6 +39,7 @@ class Sprinkler extends React.Component{
             </h2>
 
             <p>
+                <img src={forklift} style={{width:"370px", height:"300px", display:"inline", display:"inline-block", float:"right"}} />
                 {this.state.content.FIELD.INTRO}
             </p>
 
@@ -54,7 +56,7 @@ class Sprinkler extends React.Component{
             </h2>
 
             <p>
-                {this.state.content.OBJECT.CONTENT}
+                {ReactHtmlParser (this.state.content.OBJECT.CONTENT)}
             </p>
             </div>
         </div>

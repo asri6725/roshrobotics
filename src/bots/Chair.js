@@ -2,9 +2,9 @@ import {content} from '../_constants/content';
 import React from 'react';
 import  back from '../files/keyboard_arrow_left-24px.svg';
 import './bots.css';
-
+import ReactHtmlParser from 'html-react-parser'; 
 import { Button } from '@material-ui/core';
-
+import chair from '../files/Chair.png';
 class Chair extends React.Component{
     
     constructor(props){
@@ -40,6 +40,7 @@ class Chair extends React.Component{
                 <h1> {this.state.content.TITLE} </h1>
 
                 <p>
+                <img src={chair} style={{width:"250px", height:"250px", display:"inline", display:"inline-block", float:"right"}} />
                     {this.state.content.INTRO}
                 </p>
                 
@@ -55,9 +56,9 @@ class Chair extends React.Component{
                     {this.state.content.PROBLEM_STATEMENT}
                 </p>
 
-                <h2>
-                    {this.state.content.OBJECTIVE.TITLE}
-                </h2>
+                <p>
+                    {ReactHtmlParser (this.state.content.OBJECTIVE.TITLE)}
+                </p>
                 <p>
                     {objective_paragraphs}
                 </p>

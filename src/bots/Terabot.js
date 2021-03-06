@@ -1,11 +1,10 @@
-import terrabot1 from '../files/Terabot1.png';
-import terabot from '../files/Terabot.png';
 import {content} from '../_constants/content';
 import React from 'react';
 import  back from '../files/keyboard_arrow_left-24px.svg';
 import './bots.css';
 import { Button } from '@material-ui/core';
-
+import ReactHtmlParser from 'html-react-parser'; 
+import terabot from '../files/Terabot.png';
 class Terabot extends React.Component{
     
     constructor(props){
@@ -42,6 +41,7 @@ class Terabot extends React.Component{
             <h1> {this.state.content.TITLE} </h1>
 
             <p>
+                <img src={terabot} style={{width:"300px", height:"300px", display:"inline", display:"inline-block", float:"right"}} />
                 {this.state.content.INTRO}
             </p>
 
@@ -49,7 +49,7 @@ class Terabot extends React.Component{
                 {this.state.content.PROBLEM_STATEMENT}
             </p>
 
-            <h2>
+            <h2 style={{textDecoration:"underline"}}>
                 {this.state.content.OBJECTIVE.TITLE}
             </h2>
             <p>

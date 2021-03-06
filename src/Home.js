@@ -7,8 +7,8 @@ import 'swiper/swiper-bundle.css';
 import Terabot from './slides/Terabot';
 import Chair from './slides/Chair';
 import Sprinkler from './slides/Sprinkler';
-import {placeholder} from './slides/placeholder.js';
 import logo_dark from './files/logo_transparent_dark.png'
+import Forklift from './slides/Forklift';
 
 import { makeStyles } from '@material-ui/core/styles';
 import { Typography,Menu, MenuItem, Link} from '@material-ui/core';
@@ -78,11 +78,7 @@ class Home extends React.Component {
     //const classes = useStyles();
     render(){
     
-    const slides = [];
-    slides.push(
-    <SwiperSlide key={1} tag="p">
-    <placeholder />
-    </SwiperSlide>);
+    
     
     return(
         <div>
@@ -107,7 +103,7 @@ class Home extends React.Component {
                 onClose={this.handleClose}
               >
                 <Link style={{ textDecoration: 'none' }} href="/Terabot"><MenuItem onClick={this.handleClose}>Terabot</MenuItem></Link>
-                <Link style={{ textDecoration: 'none' }} href="/Chair"><MenuItem onClick={this.handleClose}>Chair</MenuItem></Link>
+                <Link style={{ textDecoration: 'none' }} href="/Pokland"><MenuItem onClick={this.handleClose}>Pokland</MenuItem></Link>
                 <Link style={{ textDecoration: 'none' }} href="/ForkLift"><MenuItem onClick={this.handleClose}>Forklift</MenuItem></Link>
                 <Link style={{ textDecoration: 'none' }} href="/Sprinkler"><MenuItem onClick={this.handleClose}>Sprinkler</MenuItem></Link>
               </Menu>
@@ -142,11 +138,14 @@ class Home extends React.Component {
                 <a href="/terabot" style={{color:"black"}}>
                 <Terabot />
                 </a>
-                <a href="/chair" style={{color:"black"}}>
+                <a href="/Pokland" style={{color:"black"}}>
                 <Chair />
                 </a>
                 <a href="/sprinkler" style={{color:"black"}}>
                 <Sprinkler />
+                </a>
+                <a href="/forklift" style={{color:"black"}}>
+                <Forklift />
                 </a>
               </div>
               <div ref={this.scrollContact}>

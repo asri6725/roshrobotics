@@ -7,17 +7,18 @@
     margin-bottom: 10px;
     cursor: pointer;
 }
+.right-chevron{
+    display: none;
+}
+.Wrap:hover .right-chevron{
+    display: block;
+}
 .imgs{
-    width: 50%;
+    margin-left: 10px;
     height: 10%;
-    margin-right: 40%;
-    margin-left: auto;
-    
 }
 .image{
-    float: right;
-    width: 30%;
-    margin: auto;
+    
 }
 .Description{
     width: 70%;

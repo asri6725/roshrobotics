@@ -45,7 +45,7 @@ class App extends React.Component {
             <Route exact path="/Sprinkler">
               <Sprinkler />
             </Route>
-            <Route exact path="/Chair">
+            <Route exact path="/Pokland">
               <Chair />
             </Route>
           </Switch>

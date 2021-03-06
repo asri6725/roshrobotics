@@ -1,32 +1,32 @@
 {
   "files": {
-    "main.css": "/static/css/main.0a63efff.chunk.css",
-    "main.js": "/static/js/main.47eee8c8.chunk.js",
-    "main.js.map": "/static/js/main.47eee8c8.chunk.js.map",
+    "main.css": "/static/css/main.cef9ec96.chunk.css",
+    "main.js": "/static/js/main.adb32cc3.chunk.js",
+    "main.js.map": "/static/js/main.adb32cc3.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.22142f44.js",
     "runtime-main.js.map": "/static/js/runtime-main.22142f44.js.map",
     "static/css/2.1d1f9f4f.chunk.css": "/static/css/2.1d1f9f4f.chunk.css",
-    "static/js/2.c062ce4c.chunk.js": "/static/js/2.c062ce4c.chunk.js",
-    "static/js/2.c062ce4c.chunk.js.map": "/static/js/2.c062ce4c.chunk.js.map",
+    "static/js/2.090524df.chunk.js": "/static/js/2.090524df.chunk.js",
+    "static/js/2.090524df.chunk.js.map": "/static/js/2.090524df.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.1d1f9f4f.chunk.css.map": "/static/css/2.1d1f9f4f.chunk.css.map",
-    "static/css/main.0a63efff.chunk.css.map": "/static/css/main.0a63efff.chunk.css.map",
-    "static/js/2.c062ce4c.chunk.js.LICENSE.txt": "/static/js/2.c062ce4c.chunk.js.LICENSE.txt",
+    "static/css/main.cef9ec96.chunk.css.map": "/static/css/main.cef9ec96.chunk.css.map",
+    "static/js/2.090524df.chunk.js.LICENSE.txt": "/static/js/2.090524df.chunk.js.LICENSE.txt",
+    "static/media/Chair.d8bcbe5c.png": "/static/media/Chair.d8bcbe5c.png",
     "static/media/Chair2.fb73b909.png": "/static/media/Chair2.fb73b909.png",
     "static/media/Home.css": "/static/media/Rosh.8303c09c.png",
     "static/media/Sprinkler.8d616d93.png": "/static/media/Sprinkler.8d616d93.png",
-    "static/media/Terabot.0ec387e5.png": "/static/media/Terabot.0ec387e5.png",
-    "static/media/Terabot1.89bb8f3a.png": "/static/media/Terabot1.89bb8f3a.png",
+    "static/media/Terabot.67a124f8.png": "/static/media/Terabot.67a124f8.png",
     "static/media/email.85bec5ee.svg": "/static/media/email.85bec5ee.svg",
+    "static/media/forklift.228f39e9.png": "/static/media/forklift.228f39e9.png",
     "static/media/keyboard_arrow_left-24px.842e761b.svg": "/static/media/keyboard_arrow_left-24px.842e761b.svg",
-    "static/media/phone.b71af526.svg": "/static/media/phone.b71af526.svg",
-    "static/media/right.563c5e58.svg": "/static/media/right.563c5e58.svg"
+    "static/media/phone.b71af526.svg": "/static/media/phone.b71af526.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.22142f44.js",
     "static/css/2.1d1f9f4f.chunk.css",
-    "static/js/2.c062ce4c.chunk.js",
-    "static/css/main.0a63efff.chunk.css",
-    "static/js/main.47eee8c8.chunk.js"
+    "static/js/2.090524df.chunk.js",
+    "static/css/main.cef9ec96.chunk.css",
+    "static/js/main.adb32cc3.chunk.js"
   ]
 }
