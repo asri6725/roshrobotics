@@ -8,7 +8,7 @@ import Sprinkler from './bots/Sprinkler';
 
 import React from 'react';
 
-import logo from './files/logo/logo_transparent.png';
+import logo_dark from './files/logo_transparent_dark.png';
 
 import {
   BrowserRouter as Router,
@@ -50,10 +50,13 @@ class App extends React.Component {
             </Route>
           </Switch>
         </Router>
-        <div style={{"height":"100px", "width":"100%", "background-color":"#5481D1"}}>
-          <p>
-            This is where some logos will sit
-          </p>
+        <div style={{"margin-top":"30px" ,"background-color":"#5481D1", "padding":"30px 30px", cursor:"default"}}>
+          <div style={{display:"flex"}}>
+                <i>
+              <img src={logo_dark} style={{width:"42px", height:"42px"}}  />
+              </i>
+              <a style={{width:"fit-content", height:"fit-content", marginTop:"11px",marginLeft:"5px", color:"white"}}  >Roshan Chavan</a>
+              </div>
         </div>
       </div>   
   );

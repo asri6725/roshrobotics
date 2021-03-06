@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 import './Contact.css';
+import mail from './files/email.svg';
+import phone from './files/phone.svg';
 
 import { Button, TextField, CircularProgress, Grid } from '@material-ui/core/';
 
@@ -103,7 +105,7 @@ class Contact extends React.Component{
         )
 
         return(
-          <div style={{'margin-top':'50px', "margin-left":"50px"}}>
+          <div style={{'margin-top':'20px', "margin-left":"50px", "padding-top":"30px"}}>
             <h3> Contact </h3>
             <Grid container spacing="auto">
               <Grid item style={{"width":"40%"}}>
@@ -111,8 +113,14 @@ class Contact extends React.Component{
                   <p>Like to get in touch?</p>
                   <p> Feel free to shoot me a message with the form or use the phone/email address provided.</p>
                   
-                  <a href="tel:+61426161260">+6142 616 120</a> <br />
-                  <a href="mailto:roshan.chavan@gmail.com">roshan.chavan@gmail.com</a>
+                  <div className="Phone-wrapper">
+                    <i className="phone"> <img src={phone} style={{width:"15px", height:"15px"}} /> </i>
+                    <a href="tel:+61426161260">+6142 616 120</a> 
+                  </div>
+                  <div className="Mail-wrapper">
+                    <i className="mail"> <img src={mail} style={{width:"18px", height:"18px",paddingTop:"10px"}} /> </i>
+                    <a href="mailto:roshan.chavan@gmail.com">roshan.chavan@gmail.com</a>
+                  </div>
               </div>
               </Grid>
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { createRef } from 'react';
 import './Home.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, Pagination, Controller, Thumbs } from 'swiper';
@@ -8,6 +8,7 @@ import Terabot from './slides/Terabot';
 import Chair from './slides/Chair';
 import Sprinkler from './slides/Sprinkler';
 import {placeholder} from './slides/placeholder.js';
+import logo_dark from './files/logo_transparent_dark.png'
 
 import { makeStyles } from '@material-ui/core/styles';
 import { Typography,Menu, MenuItem, Link} from '@material-ui/core';
@@ -32,6 +33,21 @@ cssLabel: {
 }));
 
 class Home extends React.Component {
+  scrollAbout = createRef();
+  scrollHome = createRef();
+  scrollContact = createRef();
+
+  scrollToContact = () =>{
+    this.scrollContact.current.scrollIntoView({behavior:"smooth"});
+  }
+  scrollToHome = () =>{
+    this.scrollHome.current.scrollIntoView({ behavior: "smooth" });
+  }
+
+  scrollToAbout = () => {
+    this.scrollAbout.current.scrollIntoView({ behavior: "smooth" });
+  };
+
   constructor(props){
     super(props)
     this.state = {
@@ -72,8 +88,14 @@ class Home extends React.Component {
         <div>
           <div>
           <div className="navbar">
+            <div style={{width:"40%", marginLeft:"10px",float:"left", display: "flex", cursor:"default"}}>
+              <i>
+            <img src={logo_dark} style={{width:"40px", height:"40px", marginTop:"4px"}}  />
+            </i>
+            <a style={{width:"fit-content", height:"fit-content", marginTop:"11px", marginLeft:"5px"}}  >Roshan Chavan</a>
+            </div>
             <div style={{"width":"50%", "float":"right"}} className="buttons">
-              <a>Contact</a>
+              <a onClick={this.scrollToContact}>Contact</a>
               <a aria-controls="simple-menu" aria-haspopup="true" onClick={this.handleClick}>
                 Robots
               </a>
@@ -90,12 +112,12 @@ class Home extends React.Component {
                 <Link style={{ textDecoration: 'none' }} href="/ForkLift"><MenuItem onClick={this.handleClose}>Forklift</MenuItem></Link>
                 <Link style={{ textDecoration: 'none' }} href="/Sprinkler"><MenuItem onClick={this.handleClose}>Sprinkler</MenuItem></Link>
               </Menu>
-              <a href="/about">About</a>
-              <a href="/">Home</a>
+              <a onClick={this.scrollToAbout}>About</a>
+              <a onClick={this.scrollToHome}>Home</a>
             </div>
           </div>
         
-            <div className="parallax" style={{'margin-top':'30px'}}>
+            <div className="parallax" style={{'margin-top':'30px'}} ref={this.scrollHome}>
               <div className="myDiv" style={{'padding-top':'10%','width':'50%','height':'50%','margin-left':'25%'}}>
                
               <Typography style={{'background-color':"rgba(255,255,255,0.6)",'opacity':'1', 'padding-top':'2%' , 'padding-bottom':'2%'}} variant="h5">Usable Robots in Military, Agriculture and Daily Work</Typography>
@@ -103,7 +125,7 @@ class Home extends React.Component {
               </div>
                
             </div>
-          <div style={{"background-color":"#FFF3E0"}}>
+          <div style={{"background-color":"#FFF3E0", "padding-top":"50px"}} ref={this.scrollAbout}>
             <Swiper
               spaceBetween={50}
               slidesPerView={1}
@@ -122,7 +144,9 @@ class Home extends React.Component {
                 <Chair />
                 <Sprinkler />
               </div>
+              <div ref={this.scrollContact}>
               <Contact />
+              </div>
             </div>
           </div>
     );

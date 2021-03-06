@@ -4,3 +4,30 @@ form{
 .Contact-Wrapper{
     margin-left: 50px;
 }
+
+
+
+.Phone-wrapper{
+    margin-top: 20px;
+}
+
+.Mail-wrapper{
+    margin-top: 20px;
+}
+
+.Phone-wrapper a{
+    width: fit-content;
+    text-decoration: underline;
+    color: black;
+}
+.Mail-wrapper a{
+    width: fit-content;
+    text-decoration: underline;
+    color: black;
+}
+.Phone-wrapper:hover a{
+    text-decoration: none;
+}
+.Mail-wrapper:hover a{
+    text-decoration: none;
+}
