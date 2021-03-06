@@ -1,9 +1,10 @@
-import {  Typography } from '@material-ui/core';
 import terrabot1 from '../files/Terabot1.png';
 import terabot from '../files/Terabot.png';
-import ScrollAnimation from 'react-animate-on-scroll';
 import {content} from '../_constants/content';
 import React from 'react';
+import  back from '../files/keyboard_arrow_left-24px.svg';
+import './bots.css';
+import { Button } from '@material-ui/core';
 
 class Terabot extends React.Component{
     
@@ -27,6 +28,17 @@ class Terabot extends React.Component{
         }
     return(
         <div>
+             <div className="navbar-bots">
+                <div className="back-container" style={{display:"flex"}} >
+                <i>
+                    <img src={back} style={{width:"30px", height:"30px", marginLeft:"20px"}}/>
+                </i>
+                <a href="/">Back to Home</a>
+                <Button variant="contained" color="secondary" style={{marginLeft:"auto", marginRight:"70px"}} > Patent </Button>
+                </div>
+                
+            </div>
+        <div className="Wrapper">
             <h1> {this.state.content.TITLE} </h1>
 
             <p>
@@ -49,6 +61,7 @@ class Terabot extends React.Component{
             <p>
                 {scope_paragraphs}
             </p>
+        </div>
         </div>
     );
     }
