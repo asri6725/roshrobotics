@@ -105,7 +105,6 @@ class Home extends React.Component {
                 keepMounted
                 open={Boolean(this.state.anchorEl)}
                 onClose={this.handleClose}
-              
               >
                 <Link style={{ textDecoration: 'none' }} href="/Terabot"><MenuItem onClick={this.handleClose}>Terabot</MenuItem></Link>
                 <Link style={{ textDecoration: 'none' }} href="/Chair"><MenuItem onClick={this.handleClose}>Chair</MenuItem></Link>
@@ -140,9 +139,15 @@ class Home extends React.Component {
               </Swiper>
               </div>
               <div className="ProjectWrapper">
+                <a href="/terabot" style={{color:"black"}}>
                 <Terabot />
+                </a>
+                <a href="/chair" style={{color:"black"}}>
                 <Chair />
+                </a>
+                <a href="/sprinkler" style={{color:"black"}}>
                 <Sprinkler />
+                </a>
               </div>
               <div ref={this.scrollContact}>
               <Contact />
